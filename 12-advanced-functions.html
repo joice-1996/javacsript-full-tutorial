@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced functions</title>
+</head>
+<body>
+
+  <button onclick="" class="js-button">Click</button>
+
+  <script>
+/*
+    const buttonElement = document.querySelector('.js-button');
+
+    const eventListener = () => {
+      console.log('Button clicked');
+    };
+    buttonElement.addEventListener('click', eventListener);
+
+
+    buttonElement.removeEventListener('click', eventListener);
+
+
+    buttonElement.addEventListener('click', () =>{
+      console.log('Button clicked2 ');
+    });
+    /*
+        function greeting(){
+            console.log('hello');
+        }
+
+        greeting(); // calling the function to execute its code
+
+        //functions are values
+        const num = 2;// num is a variable that holds the value 2
+
+        const function1 = function(){
+            console.log('hello2');
+        };// function1 is a variable that holds a function this function called
+        // is an anonymous function because it has no name
+
+        console.log(function1);// this will print the function definition to the console
+        console.log(typeof function1);// this will print 'function' to the console
+
+        function1(); // this will call the function stored in function1 and print 'hello2' to the console
+
+
+
+        const object1 = {
+          num : 2 ,
+          fun: function(){
+            console.log('hello3');
+          }
+        }
+
+        object1.fun(); // this will call the function stored in the fun property of object1 and print 'hello3' to the console
+      
+      //passing a function as an argument to another function
+
+        function callFunction(fun){
+          fun(); // calling the function passed as an argument
+        }
+
+        callFunction(function(){
+          console.log('hello4');
+        });// this will print 'hello4' to the console
+      
+      */
+
+      /*
+
+      setTimeout(function(){
+        console.log('hello after 2 seconds');
+      },2000);// this will print 'hello after 2 seconds' to the console after 2 seconds
+      
+      console.log('hello immediately');
+      // this will print 'hello immediately' to the console immediately this is called 
+      //asynchronous programming
+
+      //synchronous programming is when the code is executed line by line
+      
+
+      setInterval(function(){
+        console.log('hello every 3 seconds');
+      },3000);
+      // this will print 'hello every 3 seconds' to the console every 3 seconds
+
+      console.log('this is the end of the script');
+    */
+
+
+
+
+    /*['make dinner',
+      'wash dishes',
+      'watch youtube'
+    ].forEach(function(value){
+      console.log(value);
+    });
+    // this will print each value in the array to the console
+
+    ['make dinner',
+      'wash dishes',
+      'watch youtube'
+    ].forEach(function(value, index){
+      console.log(index);
+      console.log(value);
+    });
+    // this will print the index and value of each element in the array to the console
+    */
+
+    /*
+
+    const regularFunction = function(){
+      console.log('hello from regular function');
+    };// this is a regular function expression
+
+
+
+    const arrowFunction = () => {
+      console.log('hello from arrow function');
+    };
+    // this is an arrow function it is a shorter syntax for writing functions
+
+    arrowFunction(); // this will call the arrow function and print 'hello from arrow function' to the console
+
+
+    const oneParam = param => {
+      console.log(param + 1);
+
+    }
+
+    oneParam(5); // this will print 6 to the console
+    //if only one parameter is passing in the function the ( ) is optional
+
+    const singleExpression = param => param + 1;
+    console.log(singleExpression(10)); // this will print 11 to the console
+    // if the function body has only one expression the { } and return keyword are optional
+
+
+    ['make dinner',
+      'wash dishes',
+      'watch youtube'
+    ].forEach((value, index) => {
+      if(value === 'wash dishes'){
+        return; // this will skip the current iteration and move to the next one
+      } 
+      console.log(index);
+      console.log(value);
+    });
+
+
+
+
+
+    //arrow function can use also in object methods
+    const object2  = {
+      method : () =>{
+        console.log("hello");
+      },
+
+      method(){
+        //this is the most common way to define methods in objects easier to read
+      }
+    }
+
+    */
+
+
+    [1, -3, 5].filter((value, index) => {
+      /*if(value > 0){
+        return true; // this will keep the value in the new array
+      } else {
+        return false; // this will remove the value from the new array
+      }*/
+
+      return value >= 0;// shorter way to write the same code
+      //we can always return truthy or falsy values from the function
+    });
+
+
+
+
+    [1, 1, 3].map((value, index) => {
+      return value * 2; // this will return a new array with each value multiplied by 2
+    })
+
+
+    [1, 1, 3].map(value => value * 2 );
+    // even shorter way to write the same code 
+    // when there is only one parameter
+
+
+
+    
+
+
+
+
+
+
+  </script>
+
+    
+</body>
+</html>
+
+ 

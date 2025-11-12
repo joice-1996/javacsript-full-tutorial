@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+    <button>hello</button>
+    <button class="js-button"> </button> button</button>
+
+    <script>
+
+    //    console.log( document.querySelector('button')) // selects the first button element in the document
+    //    console.log( document.querySelector('body')) // selects the first body element in the document
+
+        console.log(document.querySelector('button')
+            .innerHTML);//prints 'hello' - the inner html of the button element
+        document.querySelector('button')
+            .innerHTML = 'Changed!';//changes the inner html of the button element to 'Good Job!'
+
+
+        console.log(document.querySelector('.js-button')
+            .innerHTML);//prints '' - the inner html of the button element with class 'js-button'
+
+        const buttonElement = document.querySelector('.js-button');//selects the button element with class 'js-button' and stores it in buttonElement variable
+
+
+
+        /*
+        console.log(document.title);//DOM
+        document.title = 'Chaned';//changes the title of the document to 'Changed'
+
+        console.log(document.body);//prints the body element
+        console.log(typeof document.body);//object
+
+        console.log(document.body.innerHTML);//<button>hello</button> - prints the inner html of body element
+
+
+        document.body.innerHTML = 'changed';//changes the entire body content to 'changed', removing the button
+
+        document.body.innerHTML = '<button>Good Job!</button>';//changes the entire body content to a new button with text 'Good Job!'
+        */
+    
+
+
+
+        /*
+        document.body.innerHTML = 'hello'; //changes the entire body content to 'hello', removing the button
+        document.title='Good Job!'; //changes the title of the document to 'Good Job!'
+        */
+
+
+   </script>
+
+    
+</body>
+</html>
+
+ 

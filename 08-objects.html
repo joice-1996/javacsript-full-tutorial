@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+
+    <script>
+        // const product = {
+        //     name:'socks',
+        //     price:1090
+        // };
+
+        // console.log(product); //{name:"socks",price:1090}
+        // console.log(product.name);//socks
+        // console.log(product.price);//1090
+
+        // product.name="cotton socks";
+        // console.log(product);//{name:"cotton socks",price:1090}
+
+        // product.newPrperty = true;//we can add new property
+        // console.log(product);//{name:"cotton socks",price:1090,newPrperty:true}
+        
+        // delete product.newPrperty;//we can delete property
+        // console.log(product);//{name:"cotton socks",price:1090}
+    
+        // const product2 = {
+        //     name:'shirt',
+        //     rating : {
+        //         stars : 4.5,
+        //         count : 87
+        //     },
+        //     fun : function function1(){
+        //         console.log("this is a function inside object");
+        //     }
+        // }
+    
+        // console.log(product2);//{name:"shirt"}
+        // console.log(product2.name);//shirt - dot notation
+        // console.log(product2['name']);//shirt - bracket notation
+        // console.log(product2.delivery-time)//undefined - invalid syntax
+        // console.log(product2['delivery-time'])//undefined - valid syntax
+
+        // console.log(product2.rating.count);//87
+ 
+        // product2.fun();//this is a function inside object ,  so fun called method of object product2
+        // //console.log()//log is a method of console object
+        // //Math.random() - random is a method of Math object
+
+        // //To convert js object to json object we use JSON.stringify() method
+        // console.log(JSON.stringify(product2));//{"name":"shirt","rating":{"stars":4.5,"count":87}} - representation of object in string format(remove function from the object because function can't be represented in string format)
+        // console.log(typeof JSON.stringify(product2));//string
+        
+
+        // //To convert json object to js object we use JSON.parse() method
+        // const jsonString = JSON.stringify(product2);
+        // console.log(JSON.parse(jsonString));//{name:"shirt",rating:{stars:4.5,count:87}} - converts string representation back to object
+   
+
+        console.log('hello'.length);//5 - length is property of string object
+        console.log('hello'.toUpperCase());//HELLO - toUpperCase() is method of string object
+   
+        const object1 = {
+            message :'hello'
+        };
+        //object1 is reference to the object in memory, the value of object1 is address of the object in memory and it saves the computer memory
+        const object2 = object1; //object2 is reference to object1. Both point to the same object in memory.
+        
+        object1.message = 'Good Job';//modifying the object using object1 reference, eventhough object1 decalred as const because const prevent reassignment of reference not the modification of object
+        console.log(object1);//{message:"Good Job"}
+        console.log(object2);//{message:"Good Job"} - object2 also reflects the change because both references point to the same object in memory.
+
+        const object3 = {
+            message :'Good Job'
+        };
+        console.log(object1 === object2);//true - both references point to the same object in memory
+        console.log(object1 === object3);//false - both references point to different objects in memory even though they have same properties and values.
+
+        const object4 = {
+            message :'Good Job'
+        };
+        
+        // const message = object4.message//accessing property value of object4 and assigning it to message variable
+        const { message } = object4;//destructuring assignment to extract message property from object4
+        console.log(message); // Good Job 
+
+        const object5 = {
+            name :'Good Job',
+            price:177
+        };
+        const { name , price} = object5; // destructing can use for multiple properties
+
+
+       /* const object6 = {
+            message : message
+        }*/
+
+        const object6={
+            message, //shorthand property name, equivalent to message:message
+            //   
+            method(){ //shorthand method definition, equivalent to method: function(){}
+                console.log("this is method");
+            }
+        }
+        console.log(object6);//{message:"Good Job",method:function}
+        object6.method();//this is method
+
+   </script>
+
+    
+</body>
+</html>
+
+ 
