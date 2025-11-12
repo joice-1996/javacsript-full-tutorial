@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+<body>
+    <button  class="js-add-button">Add</button>
+    <button  class="js-remove-button">Remove</button>
+
+
+   <script>
+    let messages = 2;
+
+    let isDisplayNotification = false;
+    
+    let intervalId;
+
+    displayNotification();
+
+    document.querySelector('.js-add-button')
+        .addEventListener('click', ()=>{
+            messages++;
+            displayNotification();
+        });
+    document.querySelector('.js-remove-button')
+        .addEventListener('click', () => {
+            if(messages > 0){
+                messages--;
+            }else{
+                stopNotification();
+            }
+        })
+
+    function displayNotification(){
+        if(isDisplayNotification) return;
+
+        isDisplayNotification = true;
+
+        intervalId = setInterval(function() {       
+            if(document.title === 'App'){
+                document.title = `(${messages}) New messages`;
+            }else{
+                document.title = 'App';
+            }          
+        },1000);
+    }
+
+    function stopNotification(){
+        
+        isDisplayNotification = false;
+        clearInterval(intervalId);
+        document.title = 'App';
+    }
+  
+
+    
+   </script>
+        
+        
+
+</body>
+</html>
