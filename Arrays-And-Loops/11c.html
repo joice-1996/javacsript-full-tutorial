@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Loops</title>
+</head>
+<body>
+
+    <script>
+
+       const array1 = [1, 20, 22, 24, 5];
+       const array2 = ['hi', 'hello', 'good'];
+
+       function arraySwap(array){
+              const temp = array[0];
+              array[0] = array[array.length - 1];
+              array[array.length - 1] = temp;
+              return array;
+       }
+
+        console.log(`Array 1 before swap: ${array1}`);
+        const swappedArray1 = arraySwap(array1);
+        console.log(`Array 1 after swap: ${swappedArray1}`);
+        console.log(`Array 2 before swap: ${array2}`);
+        const swappedArray2 = arraySwap(array2);
+        console.log(`Array 2 after swap: ${swappedArray2}`);
+    </script>
+    
+</body>
+</html>

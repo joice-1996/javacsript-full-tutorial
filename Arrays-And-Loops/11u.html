@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and Loops</title>
+</head>
+<body>
+    <script>
+        
+        const foods = ['egg', 'apple', 'egg', 'egg', 'ham'];
+        
+        function removeEgg(foods){
+            const copyFoods = foods.slice();
+            const reversedFoods = copyFoods.reverse();
+            const stringToRemove = 'egg';
+            const newFoods = [];
+            let no_of_eggs = 0;
+            for(let i = 0; i < reversedFoods.length; i++){
+                if(reversedFoods[i] === stringToRemove && no_of_eggs < 2){
+                    no_of_eggs++;
+                    continue;
+                } else {
+                    newFoods.push(reversedFoods[i]);
+                }
+                // console.log(no_of_eggs);
+            }
+
+            return newFoods.reverse();
+
+        }
+        console.log(removeEgg(foods));
+        console.log(foods);
+        
+
+    </script>
+</body>
+</html>

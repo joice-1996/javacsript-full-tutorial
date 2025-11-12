@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and Loops</title>
+</head>
+<body>
+    <script>
+        const strings1 = ['hello', 'world', 'search', 'good'];
+        const toSearch = 'search';
+        let index = -1;
+        for(let i = 0; i < strings1.length; i++){
+            if(strings1[i] === toSearch){
+                index = 1;
+            }
+        }
+        console.log(index);
+
+        const strings2 = ['not', 'found'];
+        index = -1;
+        for(let i = 0; i < strings2.length; i++){
+            if(strings2[i] === toSearch){
+                index = i;
+            }
+        }
+        console.log(index);
+    
+
+    </script>
+</body>
+</html>

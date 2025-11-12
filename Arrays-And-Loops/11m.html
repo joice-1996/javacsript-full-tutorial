@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and Loops</title>
+</head>
+<body>
+    <script>
+        function minMax(arr){
+            let min = '';
+            let max = '';
+            if(arr.length === 0){
+                min = null;
+                max = null;
+                return {min, max};
+            }
+            min = arr[0];
+            max = arr[0];
+
+            for(let i = 1; i < arr.length; i++){
+                if(arr[i] < min){
+                    min = arr[i];
+                }
+                if(arr[i] > max){
+                    max = arr[i];
+                }
+            }
+            return {min, max};
+        }
+        console.log(`Min and Max of the array [] is :`, minMax([]));
+        console.log(`Min and Max of the array [3] is :`, minMax([3]));
+        // console.log(`Min and Max of the array [-2, 3, -5, 7, 10] is :`, minMax([-2, 3, -5, 7, 10]));
+        
+        
+    </script>
+</body>
+</html>
