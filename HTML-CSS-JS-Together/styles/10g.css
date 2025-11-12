@@ -1,0 +1,18 @@
+body{
+    font-family: Arial;
+}
+
+.gaming-button,.music-button,.tech-button{
+    padding: 10px 20px;
+    border:none;
+    border-radius: 5px;
+    color:black;
+    font-weight: bold;
+    font-size: 16px;
+    cursor:pointer;
+}
+
+.is-toggled{
+    background-color: black;
+    color:white;
+}

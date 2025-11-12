@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles/10i.css">
+  </head>
+  <body>
+    <!-- Code changes are at the bottom. -->
+     <p class="js-calculation calculation"></p>
+    <p>
+      <button class="action-button"  onclick="
+        updateCalculation('1');
+      ">1</button>
+
+      <button onclick="
+        updateCalculation('2');
+      " class="action-button" >2</button>
+
+      <button onclick="
+        updateCalculation('3');
+      " class="action-button" >3</button>
+
+      <button onclick="
+        updateCalculation(' + ');
+      " class="action-button right-action-button">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('4');
+      " class="action-button">4</button>
+
+      <button onclick="
+        updateCalculation('5');
+      " class="action-button">5</button>
+
+      <button onclick="
+        updateCalculation('6');
+      " class="action-button">6</button>
+
+      <button onclick="
+        updateCalculation(' - ');
+      " class="action-button right-action-button" >-</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('7');
+      " class="action-button">7</button>
+
+      <button onclick="
+        updateCalculation('8');
+      " class="action-button">8</button>
+
+      <button onclick="
+        updateCalculation('9');
+      " class="action-button">9</button>
+
+      <button onclick="
+        updateCalculation(' * ');
+      " class="action-button right-action-button">*</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('0');
+      " class="action-button">0</button>
+
+      <button onclick="
+        updateCalculation('.');
+      " class="action-button">.</button>
+
+      <button onclick="
+        // Note: eval() takes a string and runs it as code.
+        // Avoid using eval() in real world projects since
+        // it can potentially be given harmful code to run.
+        // Only use eval() for learning purposes.
+        calculation = eval(calculation);
+        document.querySelector('.js-calculation')
+                .innerHTML = `${calculation}`;
+
+        // Remember to save the calculation here.
+        localStorage.setItem('calculation', calculation);
+      " class="action-button">=</button>
+
+      <button onclick="
+        updateCalculation(' / ');
+      " class="action-button right-action-button">/</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculation = '';
+        document.querySelector('.js-calculation')
+        .innerHTML = `${calculation}`;
+
+        // Remember to save the calculation here.
+        localStorage.setItem('calculation', calculation);
+      " class="clear-button">Clear</button>
+    </p>
+
+    <script
+    src="scripts/10i.js">
+    </script>
+  </body>
+</html>

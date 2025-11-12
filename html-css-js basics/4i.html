@@ -1,0 +1,37 @@
+<style>
+    .cart-button{
+        background-color: yellow;
+        color:black;
+        border:2px solid black;
+        font-size: 15px;
+        padding:4px;
+        margin-right:5px;
+    }
+    .buy-now-button{
+        background-color: orange;
+        color:white;
+        border:2px solid black;
+        font-size: 15px;
+        padding:4px;
+    }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Adults Plain Cotton T-shrt</p>
+    <p>Price $7.99</p>
+    <button onClick="
+        alert('Added');
+    " class="cart-button">Add To Cart</button>
+    <button onclick="
+        console.log('loading');
+        alert('Purchased');
+    " class="buy-now-button">Buy now</button>
+    
+</body>
+</html>
